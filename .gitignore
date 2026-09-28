@@ -11,6 +11,7 @@ data/clean/*
 *.sqlite3
 
 # Jupyter
+/notebooks/00_ideas_and_notes.ipynb
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 
