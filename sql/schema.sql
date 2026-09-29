@@ -19,9 +19,8 @@ PRAGMA foreign_keys = ON;
 
 
 -- --- Lookup tables -------------------------------------------------------
--- The categorical columns you pulled out: an id and the value it stands for.
--- These have no foreign keys of their own, so they are created and loaded
--- FIRST.
+-- The species table contains infomation about the species.
+-- The primary key is the species_id.
 CREATE TABLE species (
 	species_id INTEGER PRIMARY KEY,
 	ias_species_name TEXT, 
@@ -36,8 +35,11 @@ CREATE TABLE species (
 	ias_taxon TEXT
 	);
 
+-- The loaction table contains infomation about the location of the species impact.
+-- The primary key is the location_id.
 CREATE TABLE location(
-	region TEXT PRIMARY KEY,
+	location_id INTEGER PRIMARY KEY,
+	region TEXT,
 	country_location TEXT, 
 	island TEXT, 
 	island_k  TEXT
@@ -45,15 +47,14 @@ CREATE TABLE location(
 
 
 
--- --- Your main table -----------------------------------------------------
--- The rows you are actually analysing: the numbers you care about, plus one
--- foreign key pointing at each lookup table above. Created and loaded LAST,
--- because every key it carries has to already exist somewhere else.
+-- --- main table -----------------------------------------------------
+-- The main table is the impact tables with unique_id as the primary key 
+-- and species_id as well as location_id as foreign keys. 
 
 CREATE TABLE impact(
 	unique_id TEXT PRIMARY KEY,
 	species_id INTEGER,
-	region TEXT,
+	location_id INTEGER,
 	reference TEXT, 
 	doi TEXT, 
 	assessor TEXT,
@@ -79,9 +80,5 @@ CREATE TABLE impact(
     protected_area_k INTEGER, 
 	realm TEXT,
 	FOREIGN KEY (species_id) REFERENCES species(species_id),
-	FOREIGN KEY (region) REFERENCES location(region)
+	FOREIGN KEY (location_id) REFERENCES location(location_id)
 	);
-
-
--- --- Indexes (optional) --------------------------------------------------
--- Worth adding on your foreign keys if a query starts to feel slow.
