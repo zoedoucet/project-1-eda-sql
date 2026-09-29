@@ -1,12 +1,9 @@
 -- =========================================================================
--- schema.sql - the tables your database is made of
+-- schema.sql - the tables my database is made of
 --
 -- Project 1 | SQL: From Data to Insight
 -- Team: Zoé Doucet
--- Dataset: Invasive Alien Species
---
--- This is a DELIVERABLE: it is how someone rebuilds your database from
--- nothing, and the tables here must match the ERD you drew.
+-- Dataset: The Global Impacts Dataset of Invasive Alien Species (GIDIAS)
 --
 -- Written for SQLite. On MySQL, add a CREATE DATABASE / USE at the top and
 -- swap the types (TEXT -> VARCHAR(n), REAL -> DECIMAL, INTEGER PRIMARY KEY
