@@ -1,6 +1,20 @@
-Read me file 
-I need to write something here
+# Invasive Alien Species and Their Impacts
 
-First lets add the picture
-### Entity Relationship Diagramm 
-![Entity Relationship Diagram Invasive Species Project](images/ERD_invasiv_species.png)
+## Overview
+
+## Project Structure
+
+## Research Questions
+
+## Dataset
+
+## Requirements
+
+## How to Run
+
+## Results
+
+## Limitations
+
+## Author
+
