@@ -323,7 +323,9 @@ SELECT s.ias_species_name as "species",
 		count(
 		CASE WHEN i.magnitude_nature = 2 THEN i.species_id END) AS "magnitude 2",
 		count(
-		CASE WHEN i.magnitude_nature = 1 THEN i.species_id END) AS "magnitude 1"
+		CASE WHEN i.magnitude_nature = 1 THEN i.species_id END) AS "magnitude 1",
+		count(
+		CASE WHEN i.magnitude_cwb = 0 THEN i.species_id END) AS "magnitude 0"
 FROM impact as i
 		INNER JOIN species as s
 		on i.species_id = s.species_id
@@ -331,7 +333,8 @@ WHERE i.magnitude_nature is "3" or i.magnitude_nature is "2" or i.magnitude_natu
 GROUP BY "species"
 ORDER BY "magnitude 3" DESC,
 	     "magnitude 2" DESC,
-		 "magnitude 1" DESC
+		 "magnitude 1" DESC,
+		 "magnitude 0" DESC
 LIMIT 10;
 
 -- =========================================================================
@@ -351,7 +354,9 @@ SELECT s.ias_species_name as "species",
 		count(
 		CASE WHEN i.magnitude_cwb = 2 THEN i.species_id END) AS "magnitude 2",
 		count(
-		CASE WHEN i.magnitude_cwb = 1 THEN i.species_id END) AS "magnitude 1"
+		CASE WHEN i.magnitude_cwb = 1 THEN i.species_id END) AS "magnitude 1",
+		count(
+		CASE WHEN i.magnitude_cwb = 0 THEN i.species_id END) AS "magnitude 0"
 FROM impact as i
 		INNER JOIN species as s
 		on i.species_id = s.species_id
@@ -359,5 +364,6 @@ WHERE i.magnitude_cwb is "3" or i.magnitude_cwb is "2" or i.magnitude_cwb is "1"
 GROUP BY "species"
 ORDER BY "magnitude 3" DESC,
 	     "magnitude 2" DESC,
-		 "magnitude 1" DESC
+		 "magnitude 1" DESC,
+		 "magnitude 0" DESC
 LIMIT 10;
