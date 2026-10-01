@@ -161,12 +161,12 @@ ORDER BY "magnitude 3" DESC,
 		"magnitude 1" DESC;
 
 -- =========================================================================
--- Q7 | Which are the three taxa from the Animalia kingdom that have the greatest impact on nature
+-- Q7 | Which are the three taxonomic families from the Animalia kingdom that have the greatest impact on nature
 --		in the five most affected countries? 
 -- =========================================================================
--- Hypothesis: Across all countries, the three animal taxa with the greatest impact on the environment 
+-- Hypothesis: Across all countries, the three animal amilies with the greatest impact on the environment 
 --				are Formicidae, Muridae, and Salmonidae.
--- Finding: The most impacting taxa for Ecuador are Formicidae, Muridae and Bovidae
+-- Finding: The most impacting family for Ecuador are Formicidae, Muridae and Bovidae
 -- for Japan Fomicidae, Suidae and Serpulidae
 -- for South Africa Salmonidae, Mytilidae and Centrarchidae
 -- for Spain it is formidae, Colubridae and Muridae
@@ -199,12 +199,12 @@ ORDER BY country, "magnitude 3" DESC;
 
 
 -- =========================================================================
--- Q8 | Which are the three taxa from the Animalia kingdom that have the greatest impact on human activities
+-- Q8 | Which are the three taxonomic families from the Animalia kingdom that have the greatest impact on human activities
 --		in the five most affected countries?  
 -- =========================================================================
--- Hypothesis:  Across all countries, the three animal taxa with the greatest human activities 
+-- Hypothesis:  Across all countries, the three animal families with the greatest human activities 
 --				are Formicidae, Muridae, and Salmonidae.
--- Finding: Only the USA and South Africa reported taxa from the animal Kingdom impacting peoples activities.
+-- Finding: Only the USA and South Africa reported families from the animal Kingdom impacting peoples activities.
 -- For South Africa it is the Corvidae taxa, for the USA it in one species from the Fomicidaeand one from the Buprestidae family.
 --QUERY 
 SELECT 
@@ -233,12 +233,12 @@ GROUP BY country, s.family
 ORDER BY country, "magnitude 3" DESC;
 
 -- =========================================================================
--- Q9 | Which are the three taxa from the plantea kingdom that have the greatest impact on nature
+-- Q9 | Which are the three taxonomic families from the plantea kingdom that have the greatest impact on nature
 --		in the five most affected countries? 
 -- =========================================================================
--- Hypothesis: Across all countries, the three plant taxa with the greatest impact on nature
+-- Hypothesis: Across all countries, the three plant families with the greatest impact on nature
 --				 are Solanaceae, Araceae, and Fabaceae.
--- Finding: The most impactinct species familie for Ecuador are solanacea and meliacea
+-- Finding: The most impactinct familie for Ecuador are solanacea and meliacea
 -- for Japan Pontederiaceae, Moraceae and Hydrocharitaceae
 -- for South Africa Salviniaceae, Pontederiaceae and Pinaceae
 -- for Spain it is Rhodomelaceae and Poaceae
@@ -271,12 +271,12 @@ ORDER BY country, "magnitude 3" DESC;
 
 
 -- =========================================================================
--- Q10 | Which are the three taxa rom the Plantea kingdom that have the greatest impact on human activities
+-- Q10 | Which are the three taxonomic families rom the Plantea kingdom that have the greatest impact on human activities
 --		in the five most affected countries?  
 -- =========================================================================
--- Hypothesis:  Across all countries, the three plant taxa with the greatest impact on human activities
+-- Hypothesis:  Across all countries, the three plant families with the greatest impact on human activities
 --				 are Solanaceae, Araceae, and Fabaceae.
--- Finding: Only the USA and South Africa reported species from the animal Kingdom impacting peoples activities.
+-- Finding: Only the USA and South Africa reported families from the animal Kingdom impacting peoples activities.
 -- For South Africa it is on species from the  corvidae family, for the USA it in one species from the fomicidaeand one from the buprestidae family.
 --QUERY 
 SELECT 
