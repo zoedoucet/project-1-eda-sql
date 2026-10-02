@@ -276,7 +276,7 @@ ORDER BY country, "magnitude 3" DESC;
 -- =========================================================================
 -- Hypothesis:  Across all countries, the three plant families with the greatest impact on human activities
 --				 are Solanaceae, Araceae, and Fabaceae.
--- Finding: Only the USA and South Africa reported families from the animal Kingdom impacting peoples activities.
+-- Finding: Only the USA and South Africa reported families from the Plantae Kingdom impacting peoples activities.
 -- For South Africa it is on species from the  corvidae family, for the USA it in one species from the fomicidaeand one from the buprestidae family.
 --QUERY 
 SELECT 
